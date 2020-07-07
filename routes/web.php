@@ -23,3 +23,5 @@ Route::get('/home', 'HomeController@index')->middleware('verified');
 
 
 Route::resource('visitas', 'VisitaController');
+
+Route::resource('salidas', 'SalidaController');
