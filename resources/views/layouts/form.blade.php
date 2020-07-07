@@ -33,7 +33,7 @@
                 <button onclick="autorizationHandler()" id="autorization-btn" type="button" class="btn btn-dark">
                     Confirmar</button>
 
-            </div
+            </div>
         </div>
     </div>
 </div>
@@ -41,7 +41,7 @@
 
 
 <!-- registrar entrada -->
-<div class="modal fade" id="register-entrace" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="register-entrace" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -95,7 +95,7 @@
 
 
 <!-- registrar salida -->
-<div class="modal fade" id="register-exit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="register-exit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -147,7 +147,7 @@
 <!-- salida -->
 
 <!-- Actualizar datos -->
-<div class="modal fade" id="update-info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="update-info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
