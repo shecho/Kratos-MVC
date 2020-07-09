@@ -5,27 +5,32 @@ const autorizationHandler = () => {
         .value;
     let token = document.getElementById("token-autorization").value;
     let data = {
-        "documento": documentAutorization,
-        "_token": token
+        documento: documentAutorization,
+        _token: token
     };
-    console.log(data);
+    let state
+    // console.log(data);
     //  console.log(data.token);
     //  console.log(`La data es: ${data.documento}`);
     validateAutorization(documentAutorization);
-
-   //  fectch al backend para prtocesar los datos
-   
+    if(documentAutorization == '123'){
+        state = true
+    }else{
+        state = false
+    }
+    
+    validateAutorizationResponse(state);
 };
 
 //Valida si los datos del formulario estn llenos y envia un mensaje respectivo
 const validateAutorization = documentAutorization => {
-    console.log(documentAutorization);
+    // console.log(documentAutorization);
     let responseAutorization = document.getElementById("response-autorization");
     if (documentAutorization !== "") {
-        console.log("no esta vacio");
-        
+        // console.log("no esta vacio");
+
         responseAutorization.innerHTML = `
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
            Consultando
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -33,12 +38,10 @@ const validateAutorization = documentAutorization => {
         </div>
         `;
         setTimeout(() => {
-         responseAutorization.innerHTML = ``
+            responseAutorization.innerHTML = ``;
         }, 1000);
-      
-
     } else {
-        console.log("esta vacio");
+        // console.log("esta vacio");
         responseAutorization.innerHTML = `
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
            Ingresa un documento
@@ -51,12 +54,29 @@ const validateAutorization = documentAutorization => {
 };
 
 // Valida la respuesta del backend muestra pinta el estado de la autorizacion
-const validateAutorizationResponse = (state) => {
-   console.log(respuesta);
-   if (state =='1') {
-      
-      console.log("Usuario Autorizado")
-   } else {
-      console.log('Uusario no autorizado o no encontrado');
-   }
-}
+const validateAutorizationResponse = state => {
+    let serverResponse = document.getElementById("sever-response-autorization");
+
+    console.log(serverResponse);
+    if (state == true) {
+        setTimeout(() => {
+            serverResponse.innerHTML = `
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            EL usuario esta autorizado
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>`;
+        }, 1100);
+    } else {
+        setTimeout(() => {
+        serverResponse.innerHTML = `
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+           EL usuario no esta autorizado
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+           </button>
+        </div>`;
+        }, 1300);
+    }
+};

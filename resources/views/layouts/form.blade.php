@@ -22,10 +22,10 @@
                 </form>
             </div>
             <div class="p-2 form-group" id="response-autorization">
-                Validation response here
+                
             </div>
             <div class="p-2 form-group" id="sever-response-autorization">
-                Server Response Here
+               
             </div>
 
             <div class="modal-footer">
