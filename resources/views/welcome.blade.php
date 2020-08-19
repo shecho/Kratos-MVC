@@ -64,14 +64,24 @@
                             data-toggle="modal" data-target="#check-autorization" data-whatever="@mdo">
                             Consultar Autorizacion
                         </button>
+                      
                         <br />
                         <button onclick="getTimeAndHour()" id="entrace" typide="button"
-                            class="m-2 p-1 entraceButton btn btn-outline-dark btn-xl text-bold text-uppercase js-scroll-trigger"
+                            class="m-2 p-1 entraceButton btn btn-outline-dark text-bold text-uppercase js-scroll-trigger"
                             data-toggle="modal" data-target="#register-entrace" data-whatever="@mdo">
                             Registrar Entrada
                         </button>
+
+
+                        <!--  -->
+                        <a class="btn btn-outline-dark btn-xl text-bold text-uppercase js-scroll-trigger" href="/visitas">Registrar visita
+                        </a>
+                        <a class="btn btn-outline-dark btn-xl text-bold text-uppercase js-scroll-trigger" href="/salidas">Registrar Salida
+                        </a>
+
+                        <!--  -->
                         <br />
-                        <button onclick="getTimeAndHourExit()" id="exit" typide="button"
+                        <!-- <button onclick="getTimeAndHourExit()" id="exit" typide="button"
                             class="m-2 p-1 entraceButton btn btn-outline-dark text-bold js-scroll-trigger"
                             data-toggle="modal" data-target="#register-exit" data-whatever="@mdo">
                             Registrar Salida
@@ -81,7 +91,7 @@
                             class="m-2 p-1 entraceButton btn btn-outline-dark btn-xl text-bold text-uppercase js-scroll-trigger"
                             data-toggle="modal" data-target="#update-info" data-whatever="@mdo">
                             Actualizar Datos
-                        </button>
+                        </button> -->
 
                         <div class="d-flex">
                             @if (Route::has('login'))
@@ -92,7 +102,7 @@
                                     </div> -->
 
                                     @auth
-                                    <a href="{{ url('/home') }}">Home</a>
+                                    <a href="{{ url('/home') }}">Panel de control</a>
                                     @else
                                     <a class="m-1 btn btn-outline-dark p-2" href="{{ route('login') }}">Login</a>
 

@@ -59,6 +59,14 @@
                         <input placeholder="Nombre Completo" type="text" class="form-control" id="entrace-name">
                     </div>
                     <div class="form-group">
+                        <select id="cars">
+                            <option value="volvo">Cuero</option>
+                            <option value="saab">Mobiliario</option>
+                            <option value="vw">Moda</option>
+                            <option value="audi" selected>Complejo Sur</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <div class="form-group">
                             <input placeholder="Documento" type="number" class="form-control" id="entrace-document">
                         </div>
